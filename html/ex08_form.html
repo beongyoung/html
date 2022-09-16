@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex08_form</title>
+</head>
+<body>
+    <!--
+        form = 사용자가 입력한 데이터들을 묶어서 다른 공간에 전달 시켜주는 입력 폼
+        action = 전송할 위치를 적는 공간
+        method = get,post 의 전송방식
+            get : url 넘겨줌 (기본값)
+            post : url 감춤
+    -->
+    <form action="#">
+        <!--1. 일반문자를 입력하는 입력창-->
+        <input type="text"> <button type = "button" onclick= "location.href = 'https://www.naver.com';">ok</button>
+        <br>
+        <!--
+            2. 추가 속성
+            placeholder : 미리보기
+            maxlength : 글자수 제한
+        -->
+        <label for="Username">아이디 : </label>
+        <input type="text"  name="Username" id="Username" placeholder="Enter username..." maxlength = 10>
+        <br>
+        <label for="password">비밀번호 : </label>
+        <input type="password" name="password" id="password" placeholder="Enter password..." maxlength = 15>
+        <!--
+            3. Checkbox / Radio 버튼
+            checkbox : 복수의 데이터 선택
+            radio : 여러개중 1개의 데이터 선택
+        -->
+        <br>
+        <input type = "checkbox" id = hobby placeholder="hobby">
+        <br>
+        <label for="man">man : </label>
+        <input type = "radio" name = radio id = man value = man>
+        <label for="woman">woman : </label>
+        <input type = "radio" name = radio id = woman value = woman>
+    </form>
+</body>
+</html>

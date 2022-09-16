@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex07_table</title>
+</head>
+
+<body>
+    <!--
+        <table> 표를 만들기 위한 공간 할당
+        <tr> (table row) 표의 행을 담당하는 태그
+        <th> (table head) 표의 컬럼을 제작하는 태그
+        <td> (table data) 표의 데이터를 넣을때 사용
+        colspan : 가로 (기본 : 1)
+        rowspan : 세로 (기본 : 1)
+    -->
+    <table border="1px solid bk" width = 330>
+        <tr bgcolor = "0x554866">
+            <th width = 100 height = 40>
+                나이
+            </th>
+            <th colspan = 2 width = 150 height = 40>
+                이름 / 성별
+            </th>
+            <th width = 80 height = 40>
+                비고
+            </th>
+        </tr>
+        <tr align = "Center">
+            <td>22</td>
+            <td>BY</td>
+            <td>남</td>
+            <td rowspan = "2"></td>
+        </tr>
+        <tr align = "Center">
+            <td>23</td>
+            <td>BY</td>
+            <td>여</td>
+        </tr>
+    </table>
+</body>
+
+</html>
