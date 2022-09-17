@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <style>
+        /*
+            1. 전체 선택자(*) : html안에 존재하는 모든 태그들에게 적용 (우선순위 : 최하위)
+            2. 타입(태그) 선택자(태그명) : html안에 존재하는 특정 태그들에게 적용
+            3. 클래스선택자(.) : html안에 존재하는 특정 클래스들에게 적용
+            4. 아이디선택자(#) : html안에 존재하는 유일한 id값에게 적용 (우선순위 : 최상위)
+        */
+        *{
+            color : orange;
+        }
+        h1{
+            color : blue;
+        }
+        .txt{
+            color : red;
+        }
+        #hi{
+            color : purple;
+        }
+    </style>
+</head>
+<body>
+    <h1 class = "txt">h1</h1>
+    <h2>h2</h2>
+    <span class = "txt" id = "hi">안녕하세요</span>
+    <p id = "hi">점심시간</p>
+</body>
+</html>
