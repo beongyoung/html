@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ex08_form</title>
 </head>
+
 <body>
     <!--
         form = 사용자가 입력한 데이터들을 묶어서 다른 공간에 전달 시켜주는 입력 폼
@@ -14,9 +16,9 @@
             get : url 넘겨줌 (기본값)
             post : url 감춤
     -->
-    <form action="#">
+    <form action="https://beongyoung.github.io/">
         <!--1. 일반문자를 입력하는 입력창-->
-        <input type="text"> <button type = "button" onclick= "location.href = 'https://www.naver.com';">ok</button>
+        <input type="text"> <button type="button" onclick="location.href = 'https://www.naver.com';">ok</button>
         <br>
         <!--
             2. 추가 속성
@@ -24,22 +26,60 @@
             maxlength : 글자수 제한
         -->
         <label for="Username">아이디 : </label>
-        <input type="text"  name="Username" id="Username" placeholder="Enter username..." maxlength = 10>
+        <input type="text" name="Username" id="Username" placeholder="Enter username..." maxlength=10>
         <br>
         <label for="password">비밀번호 : </label>
-        <input type="password" name="password" id="password" placeholder="Enter password..." maxlength = 15>
+        <input type="password" name="password" id="password" placeholder="Enter password..." maxlength=15>
         <!--
             3. Checkbox / Radio 버튼
             checkbox : 복수의 데이터 선택
             radio : 여러개중 1개의 데이터 선택
         -->
         <br>
-        <input type = "checkbox" id = hobby placeholder="hobby">
+        <label for="hobby">축구 : </label>
+        <input type="checkbox" name="hobby" value="축구">
+
+        <label for="hobby">야구 : </label>
+        <input type="checkbox" name="hobby" value="야구">
+
         <br>
         <label for="man">man : </label>
-        <input type = "radio" name = radio id = man value = man>
+        <input type="radio" name=radio id=man value=man>
+
         <label for="woman">woman : </label>
-        <input type = "radio" name = radio id = woman value = woman>
+        <input type="radio" name=radio id=woman value=woman>
+
+        <br>
+        <!--
+            Additional Input
+        -->
+        <input type="file" value="파일 올리기" alt="파일 첨부">
+
+        <br>
+        <input type="color">
+
+        <br>
+        <input type="range">
+
+        <br>
+        <input type="date">
+        <input type="datetime-local">
+
+        <br>
+        <select name="website" id="domain">
+            <option value="naver">naver</option>
+            <option value="daum">daum</option>
+            <option value="google">google</option>
+        </select>
+
+        <!--
+            최종적으로 값을 보내주는 버튼 = submit
+            form 태그에 작성했던 action의 url로 값을 전달
+        -->
+        <br>
+        <button type="submit">제출</button>
+        <button type="reset">초기화</button>
     </form>
 </body>
+
 </html>
