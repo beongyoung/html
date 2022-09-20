@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Final</title>
+    <style>
+        span{
+            display: none;
+        }
+        
+        a:hover + span{
+            display: inline;
+        }
+
+
+        /*
+            할일 : (a태그에 마우스를 올렸을 때) (그 옆에있는 span태그)의 (디스플레이를 inline으로 변경)
+            선택자 팁!
+            선택자의 맨앞은 기준점(a:hover)이고 마지막에 나오는게(span) 목적지이다.
+            항상 선택자를 작성할때는 마지막에 작성하는거에 적용이 된다는걸 기억하자.
+        */
+
+    </style>
+</head>
+<body>
+    <a href="#">네이버로 이동!</a>
+    <span>www.naver.com</span>
+    <br>
+    <a href="#">다음으로 이동!</a>
+    <span>www.daum.net</span>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Flex</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        #div1 {
+            background-color: red;
+        }
+
+        #div2 {
+            background-color: blue;
+        }
+
+        #div3 {
+            background-color: green;
+        }
+
+        #container {
+            width: 1000px;
+            height: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*
+            flex는 레이아웃을 배치할때 가장 많이 사용되는 속성
+            https://studiomeal.com/archives/197
+            블로그 참고하여 학습해보면 정말 도움이 많이 된다.
+        */
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+    </div>
+
+</body>
+
+</html>
