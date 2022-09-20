@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Position</title>
+    <style>
+        div{
+            width : 200px;
+            height : 200px;
+        }
+        #div1{
+            /* relative : 초기 생성위치 */
+            background-color: rgb(238, 108, 108);
+        }
+        #div2{
+            background-color: rgb(247, 205, 127);
+            position:relative;
+            left:200px;
+        }
+        #div3{
+            /*
+            absolute : 절대 위치
+            if 부모의 위치 : relative or absolute -> 부모의 위치가 생성위치!
+            */
+            background-color: rgb(243, 243, 147);
+            position:absolute;
+            left : 200px;
+            top: 0px;
+        }
+        #div4{
+            width: 400px;
+            height: 400px;
+            background-color: rgb(160, 125, 255);
+            position : relative;
+        }
+    </style>
+</head>
+<body>
+    <div id = "div1"></div>
+    <div id = "div2"></div>
+    <div id = "div4">
+        <div id = "div3"></div>
+    </div>
+</body>
+</html>
