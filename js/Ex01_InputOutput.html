@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Input&Output</title>
+</head>
+<body>
+    <script>
+        // 출력문
+        // 1. document.write() = html 에 출력
+        document.write("<h1>How are you?</h1>");
+        document.write("hello world");
+
+        // 2. console.log() = 콘솔창에 값을 출력
+        console.log("Error Detected...");
+
+        // 3. alert() = 알림창(팝업창 띄움)
+
+        // 입력문
+        // 1. prompt() = 사용자에게 입력창 제공, 값 입력 받음(Return type : String)
+        name = prompt("이름을 입력해주세요.");
+        console.log(name);
+
+        // 2. confirm() = 확인창(Return type : boolean)
+        type = confirm("삭제하시겠습니까?");
+        console.log(type);
+    </script>
+</body>
+</html>

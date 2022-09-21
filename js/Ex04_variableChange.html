@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_VariableChange</title>
+</head>
+<body>
+    <script>
+        // String to num
+        // 1. parseInt(String)
+        // 2. parseFloat(String)
+        // 3. Number(String)
+        let txtInt = "10";
+        let txtFloat = "10.5"
+        let txtNum = "15.5"
+
+        let num1 = parseInt(txtInt);
+        let num2 = parseFloat(txtFloat);
+        console.log("num1 :", num1);
+        console.log("num2 :", num2);
+        let num3 = Number(txtNum);
+        console.log("num3 :", num3);
+
+        // num to string
+        // 1. .toString(n) -> n진법으로 출력
+        // 2. String(number)
+        let str1 = num1.toString(16);
+        let str2 = String(num2)
+        console.log("num1 String :", str1);
+        console.log("num2 String :", str2);
+    </script>
+</body>
+</html>
