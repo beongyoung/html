@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Condition</title>
+</head>
+
+<body>
+    <script>
+        // 조건문 : 특정 조건이 성립했을대 동작하는 Logic
+        let is_corona = confirm("코로나 검사를 하셨나요?");
+        if (is_corona) {
+            let corona = prompt("양성인가요? 음성인가요?");
+            if (corona === "양성")
+                console.log("격리해주세요");
+            else if (corona === "음성")
+                document.write("슈퍼 항체 보유자 입니다.");
+        } else alert("검사를 시행해주세요.");
+    </script>
+</body>
+
+</html>
