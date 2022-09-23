@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_ExerciseFunction</title>
+</head>
+
+<body>
+    <script>
+        let price = 5000;
+        let topping = prompt("먹고 싶은 햄버거를 입력해주세요. (치즈, 불고기, 핫크리스피)");
+        let isSet = prompt("세트인가요? 단품인가요?");
+
+        function cola(){
+            price += 2000;
+            console.log("7. 콜라 준비 완료!");
+        }
+        function potato(){
+            price += 1500;
+            console.log("8. 감자튀김 준비 완료!");
+        }
+        
+        function hamberger(topping){
+            console.log("1. 밑에 빵을 깐다.");
+            console.log("2. 토마토를 올린다.");
+            console.log("3. " + topping + " 패티를 올린다");
+            console.log("4. 비법 소스를 뿌린다.");
+            console.log("5. 빵을 덮는다.");
+            console.log("6. 햄버거 완성!!");
+
+            if(isSet === "세트"){
+                cola()
+                potato()
+                console.log("9. 주문하신 햄버거 세트가 준비되었어요.")
+            }
+
+            else console.log("7. 주문하신 햄버거가 준비되었어요.");
+
+            return price;
+        }
+
+        hamberger(topping)
+        console.log("가격은 " + price + "입니다.");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_DOM</title>
+</head>
+<body>
+    <h1 id = "txt">
+        <span>h1 태그 글자</span>
+    </h1>
+    <p class = "num"></p>
+    <p class = "num"></p>
+
+    <script>
+        // DOM 을 만드는 이유
+        // html 문서를 만들어 주는데 태그, 속성, 컨텐츠를 각각 분리
+        let h1Tag = document.getElementById("txt");
+        console.log(h1Tag);
+
+        let textData = h1Tag.innerText;     // 태그 인식 X
+        console.log(textData);
+
+        let htmlData = h1Tag.innerHTML;     // 태그 인식
+        console.log(htmlData);
+
+        h1Tag.textContent = "안녕";
+        h1Tag.outerText = "Hello";
+        console.log(h1Tag);
+    </script>
+</body>
+</html>
