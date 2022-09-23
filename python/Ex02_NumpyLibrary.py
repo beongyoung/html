@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 # # 라이브러리 (Library)
 #   -> Numberical Python의 약자
 
