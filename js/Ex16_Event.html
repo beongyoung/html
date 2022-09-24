@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Event</title>
+</head>
+
+<body>
+    <h1 id="txt">
+        h1태그의 컨텐츠!
+    </h1>
+
+    <button id="btn-handler">핸들러 버튼</button>
+    <button id="btn-listener">리스터 버튼</button>
+    <button id="btn-event">이벤트 객체</button>
+    <script>
+        // event : 특정 요소에 내가 원하는 시점에 기능을 부여한다.
+        // click, dblclick, mouseover, mouseout
+
+        // eventHandler vs eventListener(*)
+        // 1. eventHandler
+        // - html 태그에 설정, 이벤트 프로퍼티 설정
+        // - 하나의 요소에 하나의 이벤트 밖에 부여할 수 없음
+
+        // 2. eventListener
+        // - 하나의 요소에 여러개의 이벤트를 부여할 수 없음
+
+        function show() {
+            let h1_txt = document.getElementById("txt").innerText;
+            alert(h1_txt);
+        }
+
+        function show2() {
+            let h1_txt = document.getElementById("txt").innerText;
+            alert("second");
+        }
+
+        // 1 ~ 3 : allocate function
+        // 1. html 태그에 직접 함수 연결
+        // <button id="btn_handler" onclick="show()">핸들러 버튼</button>
+
+        // 2. event property : 객체의 key 값 <단일 이벤트 처리>
+        let btn_hand = document.getElementById("btn-handler");
+        btn_hand.onclick = show;
+
+        // 3. event listener
+        // multiple event
+        let btn_listen = document.getElementById("btn-listener");
+        // btn_listen.addEventListener("click", show);
+        // btn_listen.addEventListener("click", show2);
+
+        // 4. register function
+        // - 다른 곳에서 호출 시킬 일이 없을 때 작성.
+        // btn_listen.addEventListener("click", function(){
+        //     alert("직접 등록한 함수");
+        // });
+
+        // 5. 이벤트 객체
+        // - 이벤트가 발생했을 때 종류, 주체 등을 알아낼 수 없다.
+        // -> target : 발생하는 주체
+        // -> type : 이벤트의 종류
+        let btn_event = document.getElementById("btn-event");
+        btn_event.onclick = function (e) {
+            console.log(e)
+            console.log("타겟 : ", e.target);
+            console.log("종류 : ", e.type);
+            console.log("기본값 : ", event.target);
+        }
+
+        // 6. 여러개의 요소에 이벤트를 부여
+        let btn = document.getElementsByTagName("button");
+        for(let i = 0; i < btn.length; i++){
+            btn[i].addEventListener("click", function(){
+                alert("복수개의 이벤트 처리");
+            })
+        }
+
+        // 7. Collection to Array and foreach
+        let arr_btn = Array.from(btn);
+        arr_btn.forEach(e => {
+            e.addEventListener("click", function(){
+                alert("foreach event");
+            })
+        });
+
+        // 8. Selector to get btn
+        // 단일 요소
+        let selector_btn = document.querySelector('#btn-handler');
+        console.log(selector_btn);
+
+        // 복합 요소
+        // nodelist -> 배열함수로 바로 사용가능
+        let selector_btn_all = document.querySelectorAll('button');
+        selector_btn_all.forEach(e=>{
+            e.addEventListener("click", function(){
+                alert("foreach to nodelist");
+            })
+        })
+        console.log(selector_btn_all);
+    </script>
+</body>
+
+</html>

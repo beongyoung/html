@@ -10,8 +10,8 @@
     <h1 id = "txt">
         <span>h1 태그 글자</span>
     </h1>
-    <p class = "num"></p>
-    <p class = "num"></p>
+    <p class = "num">1</p>
+    <p class = "num">2</p>
 
     <script>
         // DOM 을 만드는 이유
@@ -26,8 +26,20 @@
         console.log(htmlData);
 
         h1Tag.textContent = "안녕";
+        // 수정시 innerHTML
         h1Tag.outerText = "Hello";
         console.log(h1Tag);
+
+        // 복수개 : 타입 (HTMLCollection) != 배열
+        let ptag = document.getElementsByClassName("num");
+        console.log(ptag);
+
+        // 배열로의 형 변환
+        let arr_tag = Array.from(ptag)
+        console.log(arr_tag);
+        
+        console.log(ptag[0].innerText);
+        console.log(ptag[1].innerText);
     </script>
 </body>
 </html>

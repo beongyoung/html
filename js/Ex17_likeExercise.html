@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_LikeEvent</title>
+</head>
+<body>
+    <div align = "center" height = 100px width = 200px>
+        👍<span id = "number">0</span>
+    </div>
+    
+    <div align = "center" height = 100px width = 200px>
+        <button id = "btn_like">좋아요!</button>
+        <button id = "btn_unlike">싫어요!</button>
+    </div>
+
+    <script>
+        let btn = document.getElementsByTagName("button");
+        let like_txt = document.getElementById("number");
+        let like_num = Number(like_txt.innerHTML);
+       
+        //like
+        btn[0].addEventListener("click", function(){
+            like_num += 1;
+            like_txt.innerHTML = like_num;
+        })
+
+        //unlike
+        btn[1].addEventListener("click", function(){
+            if(like_num > 0) like_num -= 1;
+            like_txt.innerHTML = like_num;
+        })
+    </script>
+</body>
+</html>
