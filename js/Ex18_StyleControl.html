@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_StyleControl</title>
+    <style>
+        h1 {
+            color : blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="txt"> nDOM 조작한 스타일 제어</h1>
+    <div>
+        <button id="btn">스타일 변경!</button>
+    </div>
+
+    <script>
+        function change() {
+            // 스타일은 인라인방식으로만 인식 > 수정시에도 인라인방식으로 수정
+            document.getElementById("txt").style.color = "red";
+    
+            document.getElementById("txt").style.backgroundColor = "yellow";
+
+            // 내부 외부 방식의 css 불러오기
+            let txt = document.getElementById("txt");
+            getComputedStyle(txt).color
+        }
+
+        let click = document.getElementById("btn");
+            btn.addEventListener("click", function(){
+               change() 
+        })
+    </script>
+</body>
+
+</html>

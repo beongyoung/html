@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_AccessProperty</title>
+</head>
+<body>
+    <div><input type="text" id = "input-txt"></div>
+
+    <div>
+        <button onclick = "input_value()">인풋 값 가지고 오기</button>
+    </div>
+
+    <div>
+        <img src="/html/img/0917_iu.jpg" id = "img-src" alt="no picture" width = 450px, height = 500px>
+    </div>
+
+    <div>
+        <button onclick = "img_attr()">그림 속성 가져오기</button>
+    </div>
+    <script>
+        function input_value(){
+            let text = document.getElementById("input-txt").value;
+            console.log(text);
+        }
+
+        function img_attr(){
+            let src = document.getElementById("img-src").getAttribute("src");
+            console.log(src);
+
+            let set_image = document.getElementById("img-src").setAttribute("src", "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5486%2F2022%2F08%2F12%2F0000220540_002_20220812175406431.jpg&type=sc960_832")
+        }
+    </script>
+</body>
+</html>
