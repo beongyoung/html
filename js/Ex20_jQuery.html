@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_jQuery</title>
+</head>
+<body>
+    <h1 id = "txt">h1 Text</h1>
+    <script src = "jquery-3.6.1.min.js"></script>
+    <script>
+        // 순수 JS 호출
+        let js = document.getElementById('txt').innerHTML;
+        console.log("순수 js ", js);
+
+        // jQuery 호출
+        let jquery = $('h1').html();
+        console.log("jQuery ", jquery);
+
+        // jQuery 수정
+        $('#txt').html('hello');
+
+        // 순수 JS 스타일
+        document.getElementById('txt').style.color = "red";
+
+        // jQurey 스타일
+        $('#txt').css('color', 'blue');
+
+        // 순수 JS 스타일
+        document.getElementById('txt').addEventListener("click", function(){
+            alert("Click!");
+        })
+
+        // jQuery 스타일
+        $('#txt').on("click", function(){
+            alert("jQuery click!!")
+        })
+    </script>
+</body>
+</html>
