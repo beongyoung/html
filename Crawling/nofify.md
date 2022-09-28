@@ -1,8 +1,7 @@
 # Crawling webpages with python
-
-  1. Celenium 라이브러리 -> Chorme Webdriver 설치
-  2. 사용을 위한 import
-'''
+* 1. Celenium 라이브러리 -> Chorme Webdriver 설치
+* 2. 사용을 위한 import
+```
     from bs4 import BeautifulSoup as bs
     # 웹을 통제하기 위한 라이브러리
     from selenium import webdriver as wb
@@ -13,4 +12,4 @@
     import time
     # pandas 라이브러리
     import pandas as pd
-'''
+```
